@@ -1,0 +1,263 @@
+// font
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.main-wrapper {
+    height: calc(100vh - 56px);
+    background-color: #fff3ed;
+    .content{
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+
+    }
+}
+
+header.navbar {
+    background-color: white;
+    height: 60px;
+}
+
+.logout{
+    background-color: rgb(237, 126, 107);
+}
+
+aside {
+    background-color: #ffb5a0;
+    width: 300px;
+    flex-shrink: 0;
+    padding-left: 15px;
+
+    .dashboard {
+        margin-left: 18px;
+
+        .prova {
+            width: 200px;
+            height: 100px;
+            background-color: #0074D9;
+            border-radius: 20px 0 0 20px; /* Angoli arrotondati */
+        }
+    }
+
+    ::before {
+        font-size: 1rem;
+        margin-right: 16px;
+        padding-left: 2px
+    }
+
+
+    i.plus.fa-solid.fa-file {
+        margin-left: 3px;
+    }
+
+    .my_db {
+        margin-top: 40px;
+        position: relative;
+        display: inline-block;
+        letter-spacing: 0.10em;
+
+        span {
+            background-color: white;
+            color: #ffb5a0;
+            padding: 5px 5px;
+            border-radius: 25% 10%;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 80px;
+        padding-left: 15px;
+
+        li {
+            line-height: 70px;
+            position: relative;
+
+        }
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// btn animation
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 13px;
+    transition: all 0.2s ease;
+    z-index: 1;
+    padding-left: 13px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: #ff58337c;
+        width: 47px;
+        height: 47px;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    span {
+        position: relative;
+        letter-spacing: 0.20em;
+        text-transform: uppercase;
+        // vertical-align: middle;
+        font-size: 0.8rem;
+    }
+
+    svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #ffffff;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+    }
+
+    &:hover,
+    &:active {
+        &:before {
+            width: 100%;
+        }
+
+        svg {
+            transform: translateX(0);
+        }
+    }
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+// end btn animation
+
+input.form-control.me-2 {
+    border-radius: 10px;
+    background-color: rgb(255, 233, 224);
+    border-color: rgb(255, 213, 196);
+}
+
+button.btn.btn-outline-success {
+    border-radius: 10px;
+    background-color: rgb(255, 233, 224);
+    border-color: rgb(255, 213, 196);
+    color: rgb(69, 69, 69);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: rgb(255, 189, 163) !important;
+        border-color: rgb(255, 213, 196) !important;
+        color: rgb(69, 69, 69) !important;
+        box-shadow: none;
+    }
+}
+
+.alert.alert-danger {
+    border-radius: 10px;
+    background-color: #ed9b8c4a;
+}
+
+.alert.alert-success {
+    border-radius: 10px;
+}
+
+.crud-table {
+    td:first-child {
+        // width: 350px;
+        padding-left: 20px;
+    }
+
+    td.project{
+        width: 0px;
+    }
+
+    th:first-child {
+        padding-left: 20px;
+        border-top-left-radius: 10px;
+    }
+
+    th.second_th,
+    th.second_th-pro{
+        border-top-right-radius: 10px;
+    }
+
+    th.second_th-pro{
+        display: flex;
+        justify-content: center
+    }
+
+    td:last-child {
+        width: 120px;
+    }
+
+    input {
+        border: none;
+        outline: none;
+    }
+}
+
+.my_bgy {
+    background-color: rgb(254, 236, 166);
+}
+
+.my_bgr {
+    background-color: rgb(237, 126, 107);
+}
+
+.date p{
+    color: rgb(237, 126, 107);
+}
+
+form{
+    button.btn.btn-outline-warning {
+        background-color: rgb(237, 126, 107);
+        color: rgb(69, 69, 69);
+        border: none;
+    }
+    .error_message{
+        color: #731c26;
+    }
+
+    .thumb{
+        width: 200px;
+        margin-top: 25px;
+    }
+
+}
+
+.thumb-index{
+    width: 50px;
+    height: 50px;
+    object-fit: cover
+}
+
+span.badge.bg {
+    background-color: #ff58337c;
+}
+
+.checkbox .btn.btn-outline-primary {
+    color: black;
+    border-color: #ff58337c;
+}
+
+.checkbox .btn-check:checked + .btn.btn-outline-primary {
+    background-color: #ff58337c;
+}
+
