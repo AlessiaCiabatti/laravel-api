@@ -68,7 +68,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="image" class="form-label">Image</label>
+            <label id="thumb" for="image" class="form-label">Image</label>
             <input class="form-control" id="image" type="file" name="image"
             onchange="showImage(event)">
             <img src="{{ asset('storage/' . $project->image) }}" class="thumb" onerror="this.src='/img/no-image.jpg'">
