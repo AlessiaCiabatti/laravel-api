@@ -34,7 +34,7 @@ class PageController extends Controller
                 // $project->image = env('BACKEND_URL') . '/' . $project->image;
                 $project->image = Storage::url($project->img);
             } else {
-                $project->image = asset('storage/uploads/no-image.jpg');
+                $project->image = asset('img/no-image.jpg');
                 $project->image_original_name = 'no image';
             }
         } else {
