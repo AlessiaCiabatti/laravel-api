@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Type;
 use App\Models\Technology;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -30,7 +31,8 @@ class PageController extends Controller
         if ($project) {
             $success = true;
             if ($project->image) {
-                $project->image = asset('storage/' . $project->image);
+                // $project->image = env('BACKEND_URL') . '/' . $project->image;
+                $project->image = Storage::url($project->img);
             } else {
                 $project->image = asset('storage/uploads/no-image.jpg');
                 $project->image_original_name = 'no image';
